@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130530174634) do
+ActiveRecord::Schema.define(:version => 20130530205202) do
 
   create_table "allowed_responses", :force => true do |t|
     t.integer "question_id", :null => false
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20130530174634) do
 
   create_table "polls", :force => true do |t|
     t.integer "creator_id", :null => false
+    t.string  "name"
   end
 
   create_table "questions", :force => true do |t|

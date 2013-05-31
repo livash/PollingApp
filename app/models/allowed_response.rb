@@ -6,5 +6,10 @@ class AllowedResponse < ActiveRecord::Base
 
   has_many :responders, :through => :responses, :source => :responder
 
+  attr_accessible :question_id, :value
+
+  def response_count
+    self.responses.length
+  end
 
 end
